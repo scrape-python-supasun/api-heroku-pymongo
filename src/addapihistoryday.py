@@ -11,7 +11,7 @@ from bson.json_util import dumps
 # 2.flask run
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = 'mongodb://heroku_rq8d3bm0:2ebjovmic0jkd2bqhltgt802j@ds159263.mlab.com:59263/heroku_rq8d3bm0'
+app.config['MONGO_URI'] = 'mongodb://heroku_x8cpgsr1:gpuotu8ahk87ti53c483o94et2@ds161183.mlab.com:61183/heroku_x8cpgsr1'
 mongo = PyMongo(app)
 api = Api(app)
 

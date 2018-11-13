@@ -50,5 +50,7 @@ except:
 6.พิม
 if __name__ == '__main__':
     app.run(debug=True)
+    
+****อย่าลืม กด deployในherokuเเล้วpushเหมือนgithub
 
 

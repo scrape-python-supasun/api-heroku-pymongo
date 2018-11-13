@@ -7,9 +7,9 @@ import re
 # languague : pymongo
 import pymongo
 from pymongo import MongoClient
-uri = "mongodb://heroku_rq8d3bm0:2ebjovmic0jkd2bqhltgt802j@ds159263.mlab.com:59263/heroku_rq8d3bm0"
+uri = "mongodb://heroku_x8cpgsr1:gpuotu8ahk87ti53c483o94et2@ds161183.mlab.com:61183/heroku_x8cpgsr1"
 client = MongoClient(uri)
-db = client["heroku_rq8d3bm0"]
+db = client["heroku_x8cpgsr1"]
 collections = db['historyday']
 # languague : pymongo
 # languague : beautihulsoup
@@ -56,7 +56,7 @@ def numberOfDetail():
         numberOneList = element
         numberDataList.append(numberOneList)
     return numberDataList
-numberOfData = numberOfDetail()
+# numberOfData = numberOfDetail()
 
 
 def allDataHistoryDay():
@@ -69,16 +69,17 @@ def allDataHistoryDay():
         listDataAll.append(mydict)
     return listDataAll
 
-allDataDay = allDataHistoryDay()
-print(allDataDay)
+# allDataDay = allDataHistoryDay()
+# print(allDataDay)
 # languague : python
 # languague : pymongo
-# def databaseHistoryDay():
-#     allDataDay = allDataHistoryDay()
-#     result = collections.insert_many(allDataDay)
-#     result.inserted_ids
-#     return result
-# databaseHistoryDay() // ลบคอมเม้นเอาไว้ต่อmlab heroku
+def databaseHistoryDay():
+    allDataDay = allDataHistoryDay()
+    result = collections.insert_many(allDataDay)
+    result.inserted_ids
+    return result
+databaseHistoryDay() 
+# // ลบคอมเม้นเอาไว้ต่อmlab heroku
 # languague : pymongo
 
 
